@@ -11,7 +11,9 @@ import SwiftUI
 struct DirectorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                DirectionsListView()
+            }
         }
     }
 }
