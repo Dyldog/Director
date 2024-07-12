@@ -23,6 +23,7 @@
 		FC5358882C400D5200D480A2 /* RouteDirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5358872C400D5200D480A2 /* RouteDirectionsView.swift */; };
 		FC53588A2C400D7D00D480A2 /* RouteDirectionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5358892C400D7D00D480A2 /* RouteDirectionsListView.swift */; };
 		FC53588C2C400DEC00D480A2 /* RouteDirectionsNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53588B2C400DEC00D480A2 /* RouteDirectionsNavigationView.swift */; };
+		FC5662872C401AD7008F201B /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5662862C401AD7008F201B /* AppFonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FC5358872C400D5200D480A2 /* RouteDirectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDirectionsView.swift; sourceTree = "<group>"; };
 		FC5358892C400D7D00D480A2 /* RouteDirectionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDirectionsListView.swift; sourceTree = "<group>"; };
 		FC53588B2C400DEC00D480A2 /* RouteDirectionsNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDirectionsNavigationView.swift; sourceTree = "<group>"; };
+		FC5662862C401AD7008F201B /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				FC53588B2C400DEC00D480A2 /* RouteDirectionsNavigationView.swift */,
 				FC53584F2C3FDCEE00D480A2 /* RouteMapView.swift */,
 				FC53587A2C3FEFC400D480A2 /* DirectionsWritingSheet.swift */,
+				FC5662862C401AD7008F201B /* AppFonts.swift */,
 				FC53587C2C3FF9AE00D480A2 /* Extensions */,
 				FC5358512C3FDCF100D480A2 /* Assets.xcassets */,
 				FC5358532C3FDCF100D480A2 /* Preview Content */,
@@ -302,6 +305,7 @@
 				FC53588C2C400DEC00D480A2 /* RouteDirectionsNavigationView.swift in Sources */,
 				FC5358882C400D5200D480A2 /* RouteDirectionsView.swift in Sources */,
 				FC53584E2C3FDCEE00D480A2 /* DirectorApp.swift in Sources */,
+				FC5662872C401AD7008F201B /* AppFonts.swift in Sources */,
 				FC53588A2C400D7D00D480A2 /* RouteDirectionsListView.swift in Sources */,
 				FC53587B2C3FEFC400D480A2 /* DirectionsWritingSheet.swift in Sources */,
 				FC5358842C40003400D480A2 /* String+Random.swift in Sources */,

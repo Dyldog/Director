@@ -21,7 +21,7 @@ struct RouteDirectionsNavigationView: View {
             VStack {
                 Spacer()
                 Text(currentDirection)
-                    .font(.system(size: 200))
+                    .font(.massive)
                     .minimumScaleFactor(0.1)
                     .multilineTextAlignment(.center)
                     .padding()

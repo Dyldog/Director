@@ -59,7 +59,7 @@ struct DirectionsListView: View {
         NavigationLink(value: directionSet) {
             VStack(alignment: .leading) {
                 Text(directionSet.title)
-                    .bold()
+                    .font(.title.bold())
                 Text("\(directionSet.steps.count) waypoints")
                     .font(.footnote)
             }
