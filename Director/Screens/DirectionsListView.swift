@@ -1,5 +1,5 @@
 //
-//  RouteListView.swift
+//  DirectionsListView.swift
 //  Director
 //
 //  Created by Dylan Elliott on 11/7/2024.
@@ -7,33 +7,21 @@
 
 import SwiftUI
 
-struct Directions: Identifiable, Hashable, Codable {
-    let id: UUID
-    let title: String
-    let steps: [String]
-    
-    init(id: UUID, title: String, steps: [String]) {
-        self.id = id
-        self.title = title
-        self.steps = steps
-    }
-}
-
 struct DirectionsListView: View {
     @State var directions: [Directions]
-    
+
     @State private var detailDirectionSet: Directions?
     @State private var showMap: MapViewMode? = nil
-    
+
     private func directions(for id: UUID?) -> Directions? {
         guard let id else { return nil }
         return directions.first { $0.id == id }
     }
-    
+
     init() {
         _directions = .init(initialValue: Self.getSavedDirections())
     }
-    
+
     var body: some View {
         List(directions) { directionSet in
             row(with: directionSet)
@@ -51,9 +39,9 @@ struct DirectionsListView: View {
             }
         }
     }
-    
+
     // MARK: Views
-    
+
     @ViewBuilder
     private func row(with directionSet: Directions) -> some View {
         NavigationLink(value: directionSet) {
@@ -69,14 +57,14 @@ struct DirectionsListView: View {
                 showMap = .edit(directionSet.id)
             }
             .tint(.green)
-            
+
             Button(systemIcon: "trash") {
                 deleteDirections(with: directionSet.id)
             }
             .tint(.red)
         }
     }
-    
+
     @ViewBuilder
     private func mapView(for mode: MapViewMode) -> some View {
         RouteMapView(
@@ -87,11 +75,11 @@ struct DirectionsListView: View {
             case .create: createNewDirections(with: newTitle, and: newDirections)
             case let .edit(id): updateExistingDirections(with: id, title: newTitle, and: newDirections)
             }
-            
+
             showMap = nil
         }
     }
-    
+
     @ViewBuilder
     private func detailView(for directionSet: Directions) -> some View {
         RouteDirectionsView(directions: directionSet)
@@ -102,7 +90,7 @@ private extension DirectionsListView {
     enum MapViewMode {
         case create
         case edit(UUID)
-        
+
         var editID: UUID? {
             switch self {
             case let .edit(id): id
@@ -123,7 +111,7 @@ private extension DirectionsListView {
         ))
         Self.saveDirections(directions)
     }
-    
+
     func updateExistingDirections(with id: UUID, title: String, and steps: [String]) {
         guard let index = directions.firstIndex(where: { $0.id == id }) else { return }
         let oldDirections = directions[index]
@@ -134,7 +122,7 @@ private extension DirectionsListView {
         )
         Self.saveDirections(directions)
     }
-    
+
     func deleteDirections(with id: UUID) {
         guard let index = directions.firstIndex(where: { $0.id == id }) else { return }
         directions.remove(at: index)
@@ -153,7 +141,7 @@ private extension DirectionsListView {
             return []
         }
     }
-    
+
     static func saveDirections(_ newDirections: [Directions]) {
         // TODO: Show error to user
         do {

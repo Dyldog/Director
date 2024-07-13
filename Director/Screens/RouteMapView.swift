@@ -9,23 +9,6 @@ import DylKit
 import MapKit
 import SwiftUI
 
-struct IDWrapper<T>: Identifiable {
-    let id: UUID
-    let value: T
-    
-    init(id: UUID = .init(), value: T) {
-        self.id = id
-        self.value = value
-    }
-}
-
-protocol IDWrappable { }
-
-extension IDWrappable {
-    var identifiable: IDWrapper<Self> {
-        IDWrapper(value: self)
-    }
-}
 
 extension CLLocationCoordinate2D: IDWrappable { }
 
