@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BE9935D510FC73C8496C195 /* DirectionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C665B46950DE68C6462167 /* DirectionsManager.swift */; };
 		4089F902C30AC9F0DEF31A01 /* DirectionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6B24BC0B7400F6F663E6FD /* DirectionsListView.swift */; };
 		6A9E969D4D4C7384DD39D6BD /* RouteDirectionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA245A6C26CE5DB960389B /* RouteDirectionsListView.swift */; };
 		6C2B641B36B230C2B9B49D65 /* RouteDirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104B49E766111753527FE2C /* RouteDirectionsView.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		0D8B219AE7CDDA698565EA00 /* DirectionsWritingSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DirectionsWritingSheet.swift; sourceTree = "<group>"; };
 		11BA245A6C26CE5DB960389B /* RouteDirectionsListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteDirectionsListView.swift; sourceTree = "<group>"; };
+		78C665B46950DE68C6462167 /* DirectionsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DirectionsManager.swift; sourceTree = "<group>"; };
 		A0BB4CE64C50C0F4E390F4A4 /* RouteDirectionsNavigationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteDirectionsNavigationView.swift; sourceTree = "<group>"; };
 		B3FAD3813DF184259B75FB10 /* RouteMapView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteMapView.swift; sourceTree = "<group>"; };
 		C81E93D635A1E2F674152ACA /* Directions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				C81E93D635A1E2F674152ACA /* Directions.swift */,
+				78C665B46950DE68C6462167 /* DirectionsManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,7 +292,7 @@
 			);
 			mainGroup = FC5358412C3FDCEE00D480A2;
 			packageReferences = (
-				FC5358772C3FE86D00D480A2 /* XCLocalSwiftPackageReference "../DylKit" */,
+				FC5358772C3FE86D00D480A2 /* XCLocalSwiftPackageReference "DylKit" */,
 			);
 			productRefGroup = FC53584B2C3FDCEE00D480A2 /* Products */;
 			projectDirPath = "";
@@ -347,6 +350,7 @@
 				4089F902C30AC9F0DEF31A01 /* DirectionsListView.swift in Sources */,
 				BBAC1C07BBBC88CB0BB7508A /* RouteMapView.swift in Sources */,
 				8D005ADBB0AA2193A693FB90 /* RouteDirectionsNavigationView.swift in Sources */,
+				0BE9935D510FC73C8496C195 /* DirectionsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,7 +684,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		FC5358772C3FE86D00D480A2 /* XCLocalSwiftPackageReference "../DylKit" */ = {
+		FC5358772C3FE86D00D480A2 /* XCLocalSwiftPackageReference "DylKit" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../DylKit;
 		};

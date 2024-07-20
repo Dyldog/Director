@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RouteMapView.swift
 //  Director
 //
 //  Created by Dylan Elliott on 11/7/2024.
@@ -9,31 +9,30 @@ import DylKit
 import MapKit
 import SwiftUI
 
-
-extension CLLocationCoordinate2D: IDWrappable { }
+extension CLLocationCoordinate2D: IDWrappable {}
 
 struct RouteMapView: View {
     @State private var mapRect: MKMapRect = .world
-    
+
     // Draw Mode
     @State private var drawMode: Bool = false
     @State private var drawnLocations: [CLLocationCoordinate2D] = []
-    
+
     @State private var pinLocations: [IDWrapper<CLLocationCoordinate2D>] = []
-    
+
     @State var title: String
     @State var directions: [String]
     typealias Completion = (_ title: String, _ directions: [String]) -> Void
     let completion: Completion
-    
+
     private let locationManager: CLLocationManager = .init()
-    
+
     init(title: String, directions: [String] = [], completion: @escaping Completion) {
         self.title = title
         self.directions = directions.isEmpty ? [""] : directions
         self.completion = completion
     }
-    
+
     var body: some View {
         VStack {
             map
@@ -54,14 +53,14 @@ struct RouteMapView: View {
             }
         }
     }
-    
+
     private var map: some View {
         MapReader { mapProxy in
             Map(interactionModes: drawMode ? [.pitch, .rotate, .zoom] : .all) {
                 UserAnnotation()
                 MapPolyline(coordinates: drawnLocations)
                     .stroke(.blue, lineWidth: 5)
-                
+
                 ForEach(pinLocations) { location in
                     Marker(coordinate: location.value, label: { EmptyView() })
                 }
@@ -88,12 +87,12 @@ struct RouteMapView: View {
         // Makes map user location button appear under the status bar
         //        .edgesIgnoringSafeArea(.all)
     }
-    
+
     private var directionsView: some View {
         DirectionsWritingSheet(directions: $directions)
     }
 }
 
 #Preview {
-    RouteMapView(title: "TITLE") { _,_  in }
+    RouteMapView(title: "TITLE") { _, _ in }
 }

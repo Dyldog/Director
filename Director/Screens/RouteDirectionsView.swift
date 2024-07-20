@@ -11,13 +11,14 @@ struct RouteDirectionsView: View {
     let directions: Directions
     @State var mode: Mode = .navigation
     @State var currentStep: Int = 0
-    
+
     var iconForMode: String {
         switch mode {
         case .navigation: "list.bullet.clipboard"
         case .list: "map"
         }
     }
+
     var body: some View {
         Group {
             switch mode {
